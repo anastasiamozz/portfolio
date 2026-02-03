@@ -2,7 +2,7 @@ Anastasia Mozhaeva
 
 PhD in Electronics (Research in Electronics, Machine Learning & Computer Vision)
 
-Computing Lecturer / Researcher
+Senior Lecturer / Researcher
 
 School of Computing, Faculty of Commerce and Technology, Eastern Institute of Technology
 
