@@ -259,6 +259,67 @@
         width: calc(100% - 2rem);
       }
     }
+
+.news-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.news-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 999px;
+}
+
+.news-card {
+  min-width: 520px;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.news-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 1.5rem;
+}
+
+.news-content p {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  color: #373333;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.news-title {
+  color: #eb4706;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-family: Inter, sans-serif;
+}
+
+@media (max-width: 900px) {
+  .news-card {
+    min-width: 88vw;
+    max-width: 88vw;
+  }
+}  
   </style>
 </head>
 
@@ -325,8 +386,8 @@ My work focuses on developing efficient vision systems for resource-constrained 
     </p>
 
     <p class="item">
-      <strong>PGBipEd, Organizational and psychological-pedagogical foundations of inclusive higher education.</strong><br>
-      State University of Management , Russia, 2022
+      <strong>PGBipEd, Organisational and psychological-pedagogical foundations of inclusive higher education.</strong><br>
+      State University of Management, Russia, 2022
     </p>
 
     <p class="item">
@@ -342,34 +403,55 @@ My work focuses on developing efficient vision systems for resource-constrained 
 </section>
 
     <section class="section" id="projects">
-      <h2>Recent projects</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <img src="image/I2.png" alt="Human visual system contrast sensitivity model project" loading="lazy" />
-          <h3>
-            <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303987" target="_blank" rel="noopener noreferrer">
-              A contrast sensitivity model of the human visual system in modern conditions for presenting video content
-            </a>
-          </h3>
-          <p>
-            In this paper, thresholds of visibility for spatio-temporal sinusoidal variations were measured using a new method with different spatial sizes and temporal modulation rates.
-          </p>
-        </article>
+  <h2 class="news-title">Latest News</h2>
 
-        <article class="project-card">
-          <img src="image/I3.jpg" alt="Video quality metric project" loading="lazy" />
-          <h3>
-            <a href="https://ieeexplore.ieee.org/document/11281832" target="_blank" rel="noopener noreferrer">
-              Visual Artificial Intelligence: Unlocking Efficiency with Psychovisual Models
+  <div class="news-scroll">
 
-            </a>
-          </h3>
-          <p>
-            This work explores human-vision-inspired methods for improving visual AI under computational constraints. The proposed approach reduced video dataset redundancy by 15% and improved model accuracy by 3.5% while reducing computational requirements.
-          </p>
-        </article>
+    <article class="news-card">
+      <img src="image/news1.jpg" alt="Minister visits EIT Drone Research Lab">
+
+      <div class="news-content">
+        <p>
+          During her visit, Hon Penny Simmonds learned about our research on embedded vision technologies for drones, which I lead in the EIT Drone Research Lab with support from Trust Tairāwhiti. The Minister highlighted the importance of strong industry connections and encouraged us to think broadly about future applications of this emerging technology.
+          <br><br>
+          <a href="https://www.eit.ac.nz/2026/03/minister-visits-eit-tairawhiti-to-see-workforce-training-and-innovation/" target="_blank">Read more in the article</a>
+        </p>
       </div>
-    </section>
+    </article>
+
+    <article class="news-card">
+      <img src="image/I2.jpg" alt="IVCNZ and PRICAI conference">
+
+      <div class="news-content">
+        <p>
+          In November 2025, I had the pleasure of presenting my research at the Image and Vision Computing New Zealand Conference (IVCNZ), co-hosted with PRICAI.
+          <br><br>
+          My presentation, “Visual Artificial Intelligence: Unlocking Efficiency with Psychovisual Models,” explored how human visual perception can improve AI efficiency.
+        </p>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="image/news4.jpg" alt="Mātai Medical Research Institute Symposium">
+
+      <div class="news-content">
+        <p>
+          In 2025, I had the privilege of speaking at the Mātai Medical Research Institute Symposium alongside an inspiring group of scientists and innovators advancing research in Aotearoa.
+
+        </p>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="image/T9.png" alt="STEM outreach events">
+
+      <div class="news-content">
+        <p>
+          In December 2024, EIT lecturers Dr Anastasia Mozhaeva and Ian Allan took part in three STEM events, engaging more than 150 Tairāwhiti schoolchildren. One highlight was the Kōhine Robotics Expo, where young learners explored robotics and technology.
+
+        </p>
+      </div>
+    </article>
 
     <section class="section" id="funding-awards">
       <h2> Programme committee membership</h2>
