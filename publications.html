@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Publications - Anastasia Mozhaeva</title>
   <meta name="description" content="Peer-reviewed publications, conference proceedings, book chapters, and software by Dr Anastasia Mozhaeva." />
 
@@ -52,6 +53,8 @@
       color: var(--link);
       text-decoration: underline;
       text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .site-header {
@@ -118,7 +121,7 @@
     }
 
     h2 {
-      font-size: clamp(1.7rem, 4vw, 2.25rem);
+      font-size: clamp(1.6rem, 4vw, 2.25rem);
       margin-bottom: 1.5rem;
     }
 
@@ -154,9 +157,12 @@
     .publication-list li {
       font-size: clamp(0.95rem, 1.8vw, 1.05rem);
       font-weight: 300;
-      text-align: justify;
+      text-align: left;
       padding-bottom: 1rem;
       border-bottom: 1px solid rgba(55, 51, 51, 0.12);
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
     }
 
     .publication-list li:last-child {
@@ -201,7 +207,27 @@
     @media (max-width: 900px) {
       .nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .brand {
+        margin-bottom: 10px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .section {
+        padding: 1.25rem;
+      }
+
+      .publication-list li {
+        font-size: 0.95rem;
+        line-height: 1.55;
       }
     }
 
@@ -244,16 +270,26 @@
     <section class="section" id="journal-articles">
       <h2>Peer-reviewed Journal Articles</h2>
       <ul class="publication-list">
-        <li><strong>Mozhaeva A</strong>, Cree MJ, Durrant RJ, Vlasuyk I, Potashnikov A, Mazin V, Streeter L <span class="year">(2024)</span>. A contrast sensitivity model of the human visual system in modern conditions for presenting video content. <em>PLoS ONE</em>, 19(5). <a href="https://doi.org/10.1371/journal.pone.0303987" target="_blank" rel="noopener noreferrer">https://doi.org/10.1371/journal.pone.0303987</a></li>
+        <li><strong>Mozhaeva A</strong>, Cree MJ, Durrant RJ, Vlasuyk I, Potashnikov A, Mazin V, Streeter L <span class="year">(2024)</span>. A contrast sensitivity model of the human visual system in modern conditions for presenting video content. <em>PLoS ONE</em>, 19(5). <a href="https://doi.org/10.1371/journal.pone.0303987" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
         <li><strong>Mozhaeva A</strong> <span class="year">(2023, in press)</span>. Video quality assessment adapted for TV signals considering modern media content transmission features. <em>Radio Engineering</em>.</li>
+
         <li>Votyakov SY, Detusheva PV, Mazin VA, Fast SS, <strong>Mozhaeva AI</strong> <span class="year">(2023)</span>. MTUCI Database with Constant Subjective Assessment: Research and Device for Generating Video Sequences of Constant Quality. <em>DSPA: Application Issues of Digital Signal Processing</em>, 13(3), 12–19.</li>
+
         <li><strong>Mozhaeva A</strong>, Vashenko E, Selivanov V, Potashnikov A, Vlasuyk I, Streeter L <span class="year">(2022)</span>. Analysis of current video databases for quality assessment. <em>T-Comm</em>, 16(2), 48–56.</li>
+
         <li><strong>Mozhaeva A</strong>, Vlasyuk I, Nezhivleva K, Komina A <span class="year">(2022)</span>. Methodology for creating a stimulus for quantitative assessment of the flicker effect in video compression. <em>Systems for Synchronization, Formation and Processing of Signals</em>, 13(6), 29–36.</li>
+
         <li>Vyatkin M, Potashnikov A, Selivanov V, Vlasuyk I, Nezhivleva K, <strong>Mozhaeva A</strong> <span class="year">(2022)</span>. Method of preventing leakage of personal data through eyetracking modules of user devices. <em>T-Comm</em>, 16(7), 44–51.</li>
+
         <li>Akhromeiko DS, Zhuravlev AD, Safonov IA, <strong>Mozhaeva AI</strong>, Streeter L <span class="year">(2022)</span>. Analysis of modern encoding standards for streaming video transmission. <em>DSPA: Application Issues of Digital Signal Processing</em>, no. 3.</li>
+
         <li>Vlasyuk IV, Pashkovskaya AR, Myasnikova VS, Nikolskaya DI, <strong>Mozhaeva AI</strong> <span class="year">(2022)</span>. Analysis of the cost of creation of modern databases of video sequences with subjective quality assessment. <em>DSPA: Application Issues of Digital Signal Processing</em>, no. 1.</li>
+
         <li>Davydova AA, <strong>Mozhaeva AI</strong>, Khurani VK, Demina MA, Rusalimov MA <span class="year">(2022)</span>. Methodology for studying the identity of perception of user interest regions when viewing streaming video containing various content and compression artifacts. <em>Systems for Synchronization, Formation and Processing of Signals</em>, 13(6), 42–51.</li>
+
         <li>Potashnikov AM, <strong>Mozhaeva AI</strong> <span class="year">(2021)</span>. Study of the threshold resolution of the human visual system for the primary colours of the RGB system. <em>DSPA: Issues of Application of Digital Signal Processing</em>, 11(1), 3–10.</li>
+
         <li><strong>Mozhaeva AI</strong>, Vlasyuk IV, Potashnikov AM, Streeter L <span class="year">(2021)</span>. A reference objective metric for assessing video quality compatible with PSNR considers frequency and peripheral characteristics of human vision. <em>DSPA: Issues of Application of Digital Signal Processing</em>, 11(2), 44–54.</li>
       </ul>
     </section>
@@ -262,29 +298,45 @@
       <h2>Peer-reviewed Conference Proceedings</h2>
       <ul class="publication-list">
         <li><strong>Mozhaeva A</strong>, Vlasuyk I, Potashnikov A, Rogers S, Delmas P <span class="year">(2025)</span>. Visual Artificial Intelligence: Unlocking Efficiency with Psychovisual Models. <em>International Conference on Image and Vision Computing New Zealand</em>, Wellington, New Zealand, pp. 1–6.</li>
+
         <li><strong>Mozhaeva A</strong>, Vlasuyk I, Alani N, Rogers S, Streeter L <span class="year">(2025)</span>. Enhancing Wide-Angle VR Video Transmission Using Human Perception. <em>International Conference on Image and Vision Computing New Zealand</em>, Wellington, New Zealand, pp. 1–6.</li>
+
         <li>Wijewardana D, Alexander J, Adel A, Fedorov F, Alani N, <strong>Mozhaeva A</strong> <span class="year">(2025)</span>. From Lab to Real-World: Industrially Oriented AI Training Without High-Performance Hardware. <em>International Conference on Engineering Management of Communication and Technology</em>, Vienna, Austria, pp. 1–6.</li>
-        <li><strong>Mozhaeva A</strong>, Vlasuyk I, Potashnikov A, Mazin V, Streeter L <span class="year">(2024)</span>. Video Quality Metric Compatible with PSNR Considering Recent Knowledge of Peripheral Characteristics of Human Vision. <em>39th International Conference on Image and Vision Computing New Zealand</em>, Christchurch, New Zealand, pp. 1–6. <a href="https://doi.org/10.1109/IVCNZ64857.2024.10794472" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IVCNZ64857.2024.10794472</a></li>
-        <li>Vlasuyk I, Potashnikov A, Mazin V, <strong>Mozhaeva A</strong>, Egorov D <span class="year">(2024)</span>. A Measurement Method and a Mathematical Model of the Human Vision System's Temporal Peripheral Characteristics. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>, pp. 1–7. <a href="https://doi.org/10.1109/IEEECONF60226.2024.10496740" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IEEECONF60226.2024.10496740</a></li>
-        <li>Potashnikov A, <strong>Mozhaeva A</strong>, Vlasuyk I, Mazin V, Egorov D <span class="year">(2024)</span>. Research of the Dependence of the Sensitivity of the Visual System on the Geometric Dimensions of the Stimuli in the Perception of a Typical Multimedia Content. <em>36th Conference of Open Innovations Association</em>, Lappeenranta, Finland, pp. 617–625. <a href="https://doi.org/10.23919/FRUCT64283.2024.10749915" target="_blank" rel="noopener noreferrer">https://doi.org/10.23919/FRUCT64283.2024.10749915</a></li>
-        <li><strong>Mozhaeva A</strong>, Mazin V, Cree MJ, Streeter L <span class="year">(2023)</span>. NRspttemVQA: Real-Time Video Quality Assessment Based on the User’s Visual Perception. <em>38th International Conference on Image and Vision Computing New Zealand</em>, Palmerston North, New Zealand, pp. 1–7. <a href="https://doi.org/10.1109/IVCNZ61134.2023.10343863" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IVCNZ61134.2023.10343863</a></li>
-        <li>Egorova A, Baryshev R, <strong>Mozhaeva A</strong> <span class="year">(2023)</span>. Methodology of researching perception identity of regions of users' interests while viewing streaming video containing various content and compression artefacts. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>, pp. 114–120. <a href="https://doi.org/10.1109/IEEECONF56737.2023.10092038" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IEEECONF56737.2023.10092038</a></li>
-        <li>Mazin V, Cree MJ, Streeter L, Nezhivleva K, <strong>Mozhaeva A</strong> <span class="year">(2023)</span>. Research and application of the adaptive model of the human visual system for improving the effectiveness of objective video quality metrics. <em>33rd Conference of Open Innovations Association FRUCT</em>, pp. 192–197. <a href="https://doi.org/10.23919/FRUCT58615.2023.10142993" target="_blank" rel="noopener noreferrer">https://doi.org/10.23919/FRUCT58615.2023.10142993</a></li>
-        <li>Drebuzhan AM, Nezhivleva KI, Potashnikov AM, Vlasuyk IV, <strong>Mozhaeva AI</strong> <span class="year">(2022)</span>. The steganographic method of introducing additional information, resistant to transcoding and conversion. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>. <a href="https://doi.org/10.1109/IEEECONF53456.2022.9744086" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IEEECONF53456.2022.9744086</a></li>
-        <li>Egorov DA, Fedorov VD, Vlasuyk IV, Potashnikov AM, <strong>Mozhaeva AI</strong> <span class="year">(2022)</span>. A novel method for estimating the spatial frequency characteristics of cameras based on generative random sequences. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>. <a href="https://doi.org/10.1109/IEEECONF53456.2022.9744396" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IEEECONF53456.2022.9744396</a></li>
-        <li>Nezhivleva KI, Davydova AA, Drebuzhan AM, <strong>Mozhaeva AI</strong>, Balobanov A <span class="year">(2022)</span>. Comparing of modern methods used to assess the quality of video sequences during signal streaming with and without human perception. <em>Systems of Signal Synchronization, Generating and Processing in Telecommunications</em>. <a href="https://doi.org/10.1109/SYNCHROINFO55067.2022.9840983" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/SYNCHROINFO55067.2022.9840983</a></li>
-        <li>Potashnikov AM, Mazin VA, Stepanov NS, Smirnov AP, <strong>Mozhaeva AI</strong> <span class="year">(2022)</span>. Analysis of Modern Methods Used to Assess the Quality of Video Sequences During Signal Streaming. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>. <a href="https://doi.org/10.1109/IEEECONF53456.2022.9744294" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IEEECONF53456.2022.9744294</a></li>
-        <li><strong>Mozhaeva A</strong>, Potashnikov A, Vlasuyk I, Streeter L <span class="year">(2021)</span>. Constant subjective quality database: the research and device of generating video sequences of constant quality. <em>International Conference on Engineering Management of Communication and Technology</em>. <a href="https://doi.org/10.1109/EMCTECH53459.2021.9618977" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/EMCTECH53459.2021.9618977</a></li>
-        <li>Potashnikov AM, <strong>Mozhaeva AI</strong>, Vlasuyk IV, Fedorov VD, Balobanov AV <span class="year">(2021)</span>. The method of forming a panorama with increased resolution in the spatial direction. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>. <a href="https://doi.org/10.1109/IEEECONF51389.2021.9415978" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IEEECONF51389.2021.9415978</a></li>
-        <li><strong>Mozhaeva A</strong>, Streeter L, Vlasuyk I, Potashnikov A <span class="year">(2021)</span>. Full reference video quality assessment metric on base human visual system consistent with PSNR. <em>28th Conference of Open Innovations Association FRUCT</em>, pp. 309–315. <a href="https://doi.org/10.23919/FRUCT50888.2021.9347604" target="_blank" rel="noopener noreferrer">https://doi.org/10.23919/FRUCT50888.2021.9347604</a></li>
-        <li><strong>Mozhaeva A</strong>, Vlasuyk I, Potashnikov A, Cree M, Streeter L <span class="year">(2021)</span>. The method and devices for research the parameters of the human visual system to video quality assessment. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>, pp. 1–5. <a href="https://doi.org/10.1109/IEEECONF51389.2021.9416081" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/IEEECONF51389.2021.9416081</a></li>
+
+        <li><strong>Mozhaeva A</strong>, Vlasuyk I, Potashnikov A, Mazin V, Streeter L <span class="year">(2024)</span>. Video Quality Metric Compatible with PSNR Considering Recent Knowledge of Peripheral Characteristics of Human Vision. <em>39th International Conference on Image and Vision Computing New Zealand</em>, Christchurch, New Zealand, pp. 1–6. <a href="https://doi.org/10.1109/IVCNZ64857.2024.10794472" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Vlasuyk I, Potashnikov A, Mazin V, <strong>Mozhaeva A</strong>, Egorov D <span class="year">(2024)</span>. A Measurement Method and a Mathematical Model of the Human Vision System's Temporal Peripheral Characteristics. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>, pp. 1–7. <a href="https://doi.org/10.1109/IEEECONF60226.2024.10496740" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Potashnikov A, <strong>Mozhaeva A</strong>, Vlasuyk I, Mazin V, Egorov D <span class="year">(2024)</span>. Research of the Dependence of the Sensitivity of the Visual System on the Geometric Dimensions of the Stimuli in the Perception of a Typical Multimedia Content. <em>36th Conference of Open Innovations Association</em>, Lappeenranta, Finland, pp. 617–625. <a href="https://doi.org/10.23919/FRUCT64283.2024.10749915" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li><strong>Mozhaeva A</strong>, Mazin V, Cree MJ, Streeter L <span class="year">(2023)</span>. NRspttemVQA: Real-Time Video Quality Assessment Based on the User’s Visual Perception. <em>38th International Conference on Image and Vision Computing New Zealand</em>, Palmerston North, New Zealand, pp. 1–7. <a href="https://doi.org/10.1109/IVCNZ61134.2023.10343863" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Egorova A, Baryshev R, <strong>Mozhaeva A</strong> <span class="year">(2023)</span>. Methodology of researching perception identity of regions of users' interests while viewing streaming video containing various content and compression artefacts. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>, pp. 114–120. <a href="https://doi.org/10.1109/IEEECONF56737.2023.10092038" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Mazin V, Cree MJ, Streeter L, Nezhivleva K, <strong>Mozhaeva A</strong> <span class="year">(2023)</span>. Research and application of the adaptive model of the human visual system for improving the effectiveness of objective video quality metrics. <em>33rd Conference of Open Innovations Association FRUCT</em>, pp. 192–197. <a href="https://doi.org/10.23919/FRUCT58615.2023.10142993" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Drebuzhan AM, Nezhivleva KI, Potashnikov AM, Vlasuyk IV, <strong>Mozhaeva AI</strong> <span class="year">(2022)</span>. The steganographic method of introducing additional information, resistant to transcoding and conversion. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>. <a href="https://doi.org/10.1109/IEEECONF53456.2022.9744086" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Egorov DA, Fedorov VD, Vlasuyk IV, Potashnikov AM, <strong>Mozhaeva AI</strong> <span class="year">(2022)</span>. A novel method for estimating the spatial frequency characteristics of cameras based on generative random sequences. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>. <a href="https://doi.org/10.1109/IEEECONF53456.2022.9744396" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Nezhivleva KI, Davydova AA, Drebuzhan AM, <strong>Mozhaeva AI</strong>, Balobanov A <span class="year">(2022)</span>. Comparing of modern methods used to assess the quality of video sequences during signal streaming with and without human perception. <em>Systems of Signal Synchronization, Generating and Processing in Telecommunications</em>. <a href="https://doi.org/10.1109/SYNCHROINFO55067.2022.9840983" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Potashnikov AM, Mazin VA, Stepanov NS, Smirnov AP, <strong>Mozhaeva AI</strong> <span class="year">(2022)</span>. Analysis of Modern Methods Used to Assess the Quality of Video Sequences During Signal Streaming. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>. <a href="https://doi.org/10.1109/IEEECONF53456.2022.9744294" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li><strong>Mozhaeva A</strong>, Potashnikov A, Vlasuyk I, Streeter L <span class="year">(2021)</span>. Constant subjective quality database: the research and device of generating video sequences of constant quality. <em>International Conference on Engineering Management of Communication and Technology</em>. <a href="https://doi.org/10.1109/EMCTECH53459.2021.9618977" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li>Potashnikov AM, <strong>Mozhaeva AI</strong>, Vlasuyk IV, Fedorov VD, Balobanov AV <span class="year">(2021)</span>. The method of forming a panorama with increased resolution in the spatial direction. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>. <a href="https://doi.org/10.1109/IEEECONF51389.2021.9415978" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li><strong>Mozhaeva A</strong>, Streeter L, Vlasuyk I, Potashnikov A <span class="year">(2021)</span>. Full reference video quality assessment metric on base human visual system consistent with PSNR. <em>28th Conference of Open Innovations Association FRUCT</em>, pp. 309–315. <a href="https://doi.org/10.23919/FRUCT50888.2021.9347604" target="_blank" rel="noopener noreferrer">DOI</a></li>
+
+        <li><strong>Mozhaeva A</strong>, Vlasuyk I, Potashnikov A, Cree M, Streeter L <span class="year">(2021)</span>. The method and devices for research the parameters of the human visual system to video quality assessment. <em>Systems of Signals Generating and Processing in the Field of On-Board Communications</em>, pp. 1–5. <a href="https://doi.org/10.1109/IEEECONF51389.2021.9416081" target="_blank" rel="noopener noreferrer">DOI</a></li>
       </ul>
     </section>
 
     <section class="section" id="book-chapters">
       <h2>Peer-reviewed Book Chapters / Books Edited</h2>
       <ul class="publication-list">
-        <li><strong>Mozhaeva A</strong>, Mazin V, Cree MJ, Streeter L <span class="year">(2022)</span>. Video quality assessment considering the features of the human visual system. <em>Lecture Notes in Computer Science</em>. Cham: Springer Nature Switzerland, pp. 288–300. <a href="https://doi.org/10.1007/978-3-031-25825-1_21" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/978-3-031-25825-1_21</a></li>
+        <li><strong>Mozhaeva A</strong>, Mazin V, Cree MJ, Streeter L <span class="year">(2022)</span>. Video quality assessment considering the features of the human visual system. <em>Lecture Notes in Computer Science</em>. Cham: Springer Nature Switzerland, pp. 288–300. <a href="https://doi.org/10.1007/978-3-031-25825-1_21" target="_blank" rel="noopener noreferrer">DOI</a></li>
       </ul>
     </section>
 
