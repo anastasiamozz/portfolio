@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects - Anastasia Mozhaeva</title>
-  <meta name="description" content="Research and applied projects by Dr Anastasia Mozhaeva in visual AI, human vision modelling, video quality assessment, and embedded vision systems." />
+  <meta name="description" content="Research programme by Dr Anastasia Mozhaeva: perception-aware machine vision and embedded intelligence for autonomous systems, from human visual perception to UAV and robotic decision-making." />
 
   <link rel="canonical" href="https://anastasiamozz.github.io/portfolio/works.html" />
   <meta property="og:type" content="website" />
@@ -24,6 +24,8 @@
       --text: #373333;
       --heading: #eb4706;
       --link: #1987c7;
+      --future-bg: #fdf4ee;
+      --card-inset-bg: #f4f3f2;
       --radius: 14px;
       --max-width: 1220px;
       --section-padding: clamp(1.5rem, 4vw, 3rem);
@@ -139,20 +141,44 @@
       text-align: justify;
     }
 
+    .progression-line {
+      font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+      font-weight: 500;
+      color: var(--heading);
+      margin-top: 1rem;
+    }
+
+    .stage-desc {
+      font-size: clamp(1rem, 1.8vw, 1.1rem);
+      font-weight: 300;
+      max-width: 950px;
+    }
+
+    .stage-tag {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
     .project-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: var(--gap);
+      margin-top: var(--gap);
     }
 
     .project-card {
-      background: var(--card-bg);
+      background: var(--card-inset-bg);
       border-radius: var(--radius);
       padding: clamp(1rem, 2.5vw, 1.75rem);
       display: flex;
       flex-direction: column;
       gap: 1rem;
       min-height: 100%;
+    }
+
+    .project-card.future {
+      background: var(--future-bg);
+      border-left: 4px solid var(--heading);
     }
 
     .project-card h2 a {
@@ -205,6 +231,12 @@
       font-size: 0.9rem;
     }
 
+    .tag.accent {
+      border-color: rgba(235, 71, 6, 0.35);
+      color: var(--heading);
+      background: rgba(235, 71, 6, 0.06);
+    }
+
     @media (max-width: 900px) {
       .nav {
         flex-direction: column;
@@ -245,51 +277,17 @@
     <section class="section" id="top">
       <h1>Projects</h1>
       <p class="intro-text">
-        Selected research and applied projects in visual AI, human visual perception, embedded vision systems, video quality assessment, aerospace video transmission, and AI education.
+        My research programme focuses on perception-aware machine vision and embedded intelligence for autonomous systems. It develops from understanding human visual perception, through efficient visual processing and embedded machine vision, towards information prioritisation and autonomous decision-making for UAVs and robotic systems.
       </p>
+      <p class="progression-line">Human Perception&nbsp; →&nbsp; Perception-Aware Machine Vision&nbsp; →&nbsp; Embedded Intelligence&nbsp; →&nbsp; Autonomous Decision-Making</p>
     </section>
 
-    <div class="project-list">
-      <article class="project-card" id="human-vision-aerospace">
-        <h2><a href="humanvision.html">Human Vision-Based Technology for Real-Time Processing of Wide-Angle Aerospace Video Signals</a></h2>
-        <img class="project-image" src="image/H7.png" alt="Wide-angle aerospace video processing project" fetchpriority="high" />
-        <p class="project-text">
-          Limited radio transmission bandwidth seriously restricts the use of wide-angle video in real-time technologies. This project develops human-vision-inspired processing for drone pilots, aiming to support real-time wide-angle perception beyond visual line of sight.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Aerospace</span>
-          <span class="tag">Embedded Vision</span>
-          <span class="tag">Human Perception</span>
-        </div>
-      </article>
+    <section class="section" id="stage-1">
+      <span class="tag stage-tag">Stage 1</span>
+      <h2>Foundations: Human Visual Perception</h2>
+      <p class="stage-desc">Understanding which spatial, temporal, and peripheral visual information is perceptually important.</p>
 
-      <article class="project-card" id="next-generation-video-ai">
-        <h2><a href="nextgenai.html">Psychovisual Modelling as a Foundation for Efficient Visual AI</a></h2>
-        <img class="project-image" src="image/A12.png" alt="Psychovisual perception models for video AI" loading="lazy" />
-        <p class="project-text">
-          This project creates visual knowledge for training visual artificial intelligence. It reduces video dataset redundancy by leveraging human visual perception, improving internal computation and predictive accuracy in resource-constrained AI systems.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Visual AI</span>
-          <span class="tag">Deep Learning</span>
-          <span class="tag">Data Efficiency</span>
-        </div>
-      </article>
-
-      <article class="project-card" id="nrspttemvqa">
-        <h2><a href="NRspttemVQA.html">NRspttemVQA: Real-Time Video Quality Assessment Based on the User's Visual Perception</a></h2>
-        <img class="project-image large" src="image/W8.jpg" alt="Real-time video quality assessment project" loading="lazy" />
-        <p class="project-text">
-          This project developed a deep learning-based non-reference video quality metric incorporating psychophysical features of human visual perception. The metric supports stable prediction of subjective video quality ratings across independent datasets.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Video Quality</span>
-          <span class="tag">Deep Learning</span>
-          <span class="tag">User Perception</span>
-        </div>
-      </article>
-      
-
+      <div class="project-list">
       <article class="project-card" id="contrast-sensitivity-model">
         <h2><a href="contrastmodel.html">A Contrast Sensitivity Model of the Human Visual System in Modern Conditions for Presenting Video Content</a></h2>
         <img class="project-image large" src="image/A13.png" alt="Human visual system contrast sensitivity model" loading="lazy" />
@@ -302,20 +300,6 @@
           <span class="tag">Video Content</span>
         </div>
       </article>
-
-      <article class="project-card" id="video-quality-psnr">
-        <h2><a href="videoquality.html">Video Quality Metric Compatible with PSNR Considering Recent Knowledge of Human Vision</a></h2>
-        <img class="project-image large" src="image/W2.png" alt="Video quality metric project" loading="lazy" />
-        <p class="project-text">
-          This work analyses human perception of temporal frequencies in central and peripheral vision. It presents a new method for quality measurement based on contrast sensitivity models and visibility thresholds for spatio-temporal variations on modern displays.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Video Quality</span>
-          <span class="tag">PSNR</span>
-          <span class="tag">Contrast Sensitivity</span>
-        </div>
-      </article>
-
 
       <article class="project-card" id="measurement-method">
         <h2><a href="measurementmethod.html">A Measurement Method and a Mathematical Model of the Human Vision System</a></h2>
@@ -343,6 +327,124 @@
         </div>
       </article>
 
+      <article class="project-card" id="video-quality-psnr">
+        <h2><a href="videoquality.html">Video Quality Metric Compatible with PSNR Considering Recent Knowledge of Human Vision</a></h2>
+        <img class="project-image large" src="image/W2.png" alt="Video quality metric project" loading="lazy" />
+        <p class="project-text">
+          This work analyses human perception of temporal frequencies in central and peripheral vision. It presents a new method for quality measurement based on contrast sensitivity models and visibility thresholds for spatio-temporal variations on modern displays.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Video Quality</span>
+          <span class="tag">PSNR</span>
+          <span class="tag">Contrast Sensitivity</span>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section" id="stage-2">
+      <span class="tag stage-tag">Stage 2</span>
+      <h2>Perception-Aware Machine Vision and Embedded Processing</h2>
+      <p class="stage-desc">Using perceptual models to reduce redundant visual information before transmission, machine-vision processing, and AI inference.</p>
+
+      <div class="project-list">
+      <article class="project-card" id="human-vision-aerospace">
+        <h2><a href="humanvision.html">Perception-Aware Embedded Vision for Wide-Angle UAV and Autonomous Systems</a></h2>
+        <img class="project-image" src="image/H7.png" alt="Wide-angle aerospace video processing project" fetchpriority="high" />
+        <p class="project-text">
+          Limited radio transmission bandwidth seriously restricts the use of wide-angle video in real-time technologies. This work combines human visual perception, embedded processing, and wide-angle vision to reduce bandwidth and enable real-time UAV and robotic operation beyond the line of sight.
+        </p>
+        <div class="project-tags">
+          <span class="tag">UAV</span>
+          <span class="tag">Embedded Vision</span>
+          <span class="tag">Autonomous Systems</span>
+        </div>
+      </article>
+
+      <article class="project-card" id="next-generation-video-ai">
+        <h2><a href="nextgenai.html">Perception-Aware Machine Vision for Resource-Constrained Systems</a></h2>
+        <img class="project-image" src="image/A12.png" alt="Psychovisual perception models for video AI" loading="lazy" />
+        <p class="project-text">
+          Rather than only making AI models smaller, this research reduces the amount of visual information a model needs to process. It reduces training video dataset redundancy by leveraging human visual perception, improving internal computation and predictive accuracy on resource-constrained platforms.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Resource-Constrained AI</span>
+          <span class="tag">Machine Vision</span>
+          <span class="tag">Data Efficiency</span>
+        </div>
+      </article>
+
+      <article class="project-card" id="nrspttemvqa">
+        <h2><a href="NRspttemVQA.html">NRspttemVQA: Real-Time Video Quality Assessment Based on the User's Visual Perception</a></h2>
+        <img class="project-image large" src="image/W8.jpg" alt="Real-time video quality assessment project" loading="lazy" />
+        <p class="project-text">
+          This project developed a non-reference video quality metric incorporating psychophysical features of human visual perception, supporting real-time perceptual optimisation and stable prediction of subjective quality ratings across independent datasets.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Real-Time Processing</span>
+          <span class="tag">Video Quality</span>
+          <span class="tag">User Perception</span>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section" id="stage-3">
+      <span class="tag stage-tag accent">Stage 3 · Current &amp; Future Focus</span>
+      <h2>Autonomous and Intelligent Systems</h2>
+      <p class="stage-desc">Extending perception-aware processing towards information prioritisation, onboard intelligence, and autonomous decision-making for UAVs and robotic systems.</p>
+
+      <div class="project-list">
+      <article class="project-card" id="after-gabrielle">
+        <h2>After Gabrielle: Autonomous Perception-Driven Drones with On-Board AI and Quantum-Sensed Soils for a Cyclone-Resilient Tairāwhiti</h2>
+        <p class="project-text">
+          This project develops autonomous UAV systems combining onboard perception, embedded AI, visual sensing, and environmental sensing for cyclone-resilient agriculture and environmental monitoring. The research explores how autonomous platforms can prioritise relevant information, process it onboard, and support rapid decision-making under real-world computational and communication constraints.
+        </p>
+        <div class="project-tags">
+          <span class="tag accent">Funded 2026 Project</span>
+          <span class="tag accent">Principal Investigator</span>
+        </div>
+      </article>
+
+      <article class="project-card" id="eastland-port-qube">
+        <h2>Eastland Port / Qube — AI-Assisted Drone Inspection</h2>
+        <p class="project-text">
+          Industry-connected research integrating UAVs, sensing, embedded systems, machine vision, and AI for infrastructure inspection and monitoring.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Industry Partnership</span>
+          <span class="tag">UAV Inspection</span>
+        </div>
+      </article>
+
+      <article class="project-card" id="agricultural-rural-systems">
+        <h2>Agricultural and Rural Intelligent Systems</h2>
+        <p class="project-text">
+          Research integrating sensing, embedded computing, remote monitoring, machine vision, and AI for agricultural and horticultural environments, supporting New Zealand primary-sector applications.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Agriculture</span>
+          <span class="tag">Intelligent Sensing</span>
+        </div>
+      </article>
+
+      <article class="project-card future" id="future-direction">
+        <h2>Visual Attention and Information Prioritisation</h2>
+        <p class="project-text">
+          My next research stage focuses on visual attention and information prioritisation for autonomous systems. The goal is to allow robots and UAVs to identify decision-relevant information before full processing and respond more efficiently to important events.
+        </p>
+        <div class="project-tags">
+          <span class="tag accent">Next Research Direction</span>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section" id="applied">
+      <h2>Applied and Collaborative Research</h2>
+      <p class="stage-desc">Additional projects that connect this research programme to teaching and industry.</p>
+
+      <div class="project-list">
       <article class="project-card" id="students-ai-anxiety">
         <h2><a href="AIproject.html">My Students Are Afraid of AI: Helping Students Embrace New Technologies</a></h2>
         <img class="project-image large" src="image/AI128.png" alt="AI education and student support project" loading="lazy" />
@@ -355,8 +457,8 @@
           <span class="tag">Student Support</span>
         </div>
       </article>
-      
-    </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
